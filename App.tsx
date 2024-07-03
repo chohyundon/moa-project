@@ -16,6 +16,7 @@ export function Bottom() {
     <BottomTab.Navigator
       screenOptions={{
         tabBarActiveTintColor: "red",
+        headerShown: false,
       }}
     >
       <BottomTab.Screen

@@ -6,6 +6,12 @@ export const Colors = {
     gray200: "#EFEFEF",
     gray300: "#DFDFDF",
     gray400: "#B7B7B7",
+    gray500: "#949494",
+    gray600: "#777777",
+    gray700: "#555555",
+    gray800: "#2A2A2A",
+    gray900: "#111111",
+    primaryBlack: "#000000",
   },
   MoaCarrot: {
     carrot100: "#FFEAD5",
