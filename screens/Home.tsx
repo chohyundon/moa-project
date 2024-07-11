@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, Dimensions, Pressable } from "react-native";
 import { WithLocalSvg } from "react-native-svg/css";
 import { Colors, Size } from "../style/style";
 import { StatusBar } from "expo-status-bar";
@@ -38,9 +32,9 @@ export default function Home() {
         <View style={styles.couponContainer}>
           <Text style={styles.couponTopText}>쿠폰이 없습니다</Text>
           <Text style={styles.couponBottomText}>쿠폰을 추가해보세요!</Text>
-          <TouchableOpacity style={styles.button}>
+          <Pressable style={styles.button}>
             <Text style={styles.buttonText}>쿠폰 추가하기</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
     </View>

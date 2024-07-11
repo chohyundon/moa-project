@@ -1,4 +1,3 @@
-/* metro.config.ts */
 const { getDefaultConfig } = require("expo/metro-config");
 
 module.exports = (() => {
@@ -12,7 +11,7 @@ module.exports = (() => {
   };
   config.resolver = {
     ...resolver,
-    assetExts: resolver.assetExts.filter((ext: string) => ext !== "svg"),
+    assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
     sourceExts: [...resolver.sourceExts, "svg"],
   };
 

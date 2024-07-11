@@ -7,9 +7,20 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Coupon from "./screens/Coupon";
 import Share from "./screens/Share";
 import { WithLocalSvg } from "react-native-svg/css";
+import Login from "./screens/Login";
 
-const BottomTab = createBottomTabNavigator();
-const Stack = createStackNavigator();
+type RootStackParamList = {
+  Home: undefined;
+  Login: undefined;
+  홈: undefined;
+  쿠폰: undefined;
+  공유: undefined;
+  MY: undefined;
+  Bottom: undefined;
+};
+
+const BottomTab = createBottomTabNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
 export function Bottom() {
   return (
@@ -112,6 +123,11 @@ export default function App() {
           <Stack.Screen
             name="Bottom"
             component={Bottom}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

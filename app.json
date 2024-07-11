@@ -9,19 +9,45 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "white"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.donny1234.moa",
+      "backgroundColor": "white"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "white"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "https://devrepo.kakao.com/nexus/content/groups/public/"
+            ]
+          }
+        }
+      ],
+      [
+        "@react-native-kakao/core",
+        {
+          "nativeAppKey": "{{native app key}}",
+          "android": {
+            "authCodeHandlerActivity": true
+          },
+          "ios": {
+            "handleKakaoOpenUrl": true
+          }
+        }
+      ]
+    ]
   }
 }
